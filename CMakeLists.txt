@@ -23,8 +23,10 @@ set(SOURCES
 include_directories(Include) 
 include_directories(Source) 
 
-set(CMAKE_C_FLAGS_DEBUG     "${CMAKE_C_FLAGS_DEBUG} -Wall -Wextra -g -std=c99 -lm") 
+set(CMAKE_C_FLAGS_DEBUG     "${CMAKE_C_FLAGS_DEBUG} -Wall -Wextra -g -std=c99") 
 
-set(CMAKE_C_FLAGS_RELEASE     "${CMAKE_C_FLAGS_RELEASE} -Wall -std=c99 -lm")
+set(CMAKE_C_FLAGS_RELEASE     "${CMAKE_C_FLAGS_RELEASE} -Wall -std=c99")
 
 add_executable(${APP_NAME} ${SOURCES})
+target_link_libraries(${APP_NAME} m) 
+
