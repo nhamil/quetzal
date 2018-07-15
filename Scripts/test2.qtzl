@@ -1,0 +1,47 @@
+
+class Test 
+{
+    var a; 
+    var b = 123; 
+    
+    construct(a = nul) 
+    {
+        this.a = a; 
+    }
+    
+    function DoSomething() print "a = " + a + ", b = " + 123; 
+}
+
+var test = Test(); 
+
+test.DoSomething(); 
+
+# a = nul, b = 123
+
+######################## 
+
+names
+    0 Test 
+    1 a 
+    2 b 
+    3 DoSomething 
+
+consts 
+    0 nul 
+    1 123 
+
+text    
+    0  MAKE_CLASS 0 
+    2  ADD_NUL 1 
+    4  ADD_VAR 2 3 
+    6  FUNCTION 4 
+    8  LOAD 6 
+    10 LOAD_NAME 1 
+    12 ADD 
+    13 LOAD 7 
+    14 ADD 
+    15 LOAD 8 
+    16 ADD 
+    17 PRINT 
+    18 CONSTRUCT 1 1 
+    19 
